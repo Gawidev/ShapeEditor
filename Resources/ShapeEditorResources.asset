@@ -33,6 +33,8 @@ MonoBehaviour:
   shapeEditorFaceSelect: {fileID: 2800000, guid: 70271061b970f6142bc1c570451d1331, type: 3}
   shapeEditorFlipHorizontally: {fileID: 2800000, guid: f3869c58b7571c04bb3d92c15d2b6881, type: 3}
   shapeEditorFlipVertically: {fileID: 2800000, guid: 620c7febb2a0936488a0f70141a5ecb8, type: 3}
+  shapeEditorGridDouble: {fileID: 2800000, guid: 366178fd047204740869929ed1f573eb, type: 3}
+  shapeEditorGridHalf: {fileID: 2800000, guid: 2ecf36a505df4a14f8958f201f3da443, type: 3}
   shapeEditorHome: {fileID: 2800000, guid: fc1b94e293a80fc4e9a2dee33d4f727b, type: 3}
   shapeEditorIcon: {fileID: 2800000, guid: e26ddf28b90139547be10d543d9da1d7, type: 3}
   shapeEditorMeasuringTape: {fileID: 2800000, guid: b175d1172db56d74f98e3b6c84864d51, type: 3}

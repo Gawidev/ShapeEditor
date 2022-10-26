@@ -324,6 +324,18 @@ namespace AeternumGames.ShapeEditor
             gridZoom = 1f;
         }
 
+        /// <summary>Will double the size of the current grid snapping value.</summary>
+        public void GridDoubleSnap()
+        {
+            gridSnap *= 2;
+        }
+        
+        /// <summary>Will half the size of the current grid snapping value.</summary>
+        public void GridHalfSnap()
+        {
+            gridSnap /= 2;
+        }
+        
         /// <summary>Attempts to find the closest segment at the specified screen position.</summary>
         /// <param name="position">The screen position to search at.</param>
         /// <returns>The segment if found or null.</returns>

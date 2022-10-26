@@ -12,6 +12,8 @@ namespace AeternumGames.ShapeEditor
         private GuiLabel gridZoomLabel;
         private GuiFloatTextbox gridSnapTextbox;
         private GuiLabel gridSnapLabel;
+        private GuiButton gridDoubleSnapButton;
+        private GuiButton gridHalfSnapButton;
         private GuiFloatTextbox angleSnapTextbox;
         private GuiLabel angleSnapLabel;
         private GuiButton snappingToggleButton;
@@ -31,6 +33,8 @@ namespace AeternumGames.ShapeEditor
             Add(gridZoomLabel = new GuiLabel("Zoom:", new float2(32, 20)));
             Add(gridSnapTextbox = new GuiFloatTextbox(new float2(50, 16)) { allowNegativeNumbers = false });
             Add(gridSnapLabel = new GuiLabel("Snap:", new float2(30, 20)));
+            Add(gridDoubleSnapButton = new GuiButton(resources.shapeEditorGridDouble, 20, editor.GridDoubleSnap));
+            Add(gridHalfSnapButton = new GuiButton(resources.shapeEditorGridHalf, 20, editor.GridHalfSnap));
             Add(angleSnapTextbox = new GuiFloatTextbox(new float2(50, 16)) { allowNegativeNumbers = false });
             Add(angleSnapLabel = new GuiLabel("Angle:", new float2(32, 20)));
 
@@ -62,6 +66,14 @@ namespace AeternumGames.ShapeEditor
             xpos -= gridSnapTextbox.size.x + 3f;
             gridSnapTextbox.position = new float2(xpos, 3f);
             editor.gridSnap = gridSnapTextbox.UpdateValue(editor.gridSnap);
+
+            // grid double snap button:
+            xpos -= gridDoubleSnapButton.size.x + 3f;
+            gridDoubleSnapButton.position = new float2(xpos, 1f);
+
+            // grid half snap button:
+            xpos -= gridHalfSnapButton.size.x + 3f;
+            gridHalfSnapButton.position = new float2(xpos, 1f);
 
             // grid snap label:
             xpos -= gridSnapLabel.size.x + 3f;

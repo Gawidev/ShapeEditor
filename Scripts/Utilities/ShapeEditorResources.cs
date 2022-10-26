@@ -62,6 +62,8 @@ namespace AeternumGames.ShapeEditor
         public Texture2D shapeEditorFaceSelect;
         public Texture2D shapeEditorFlipHorizontally;
         public Texture2D shapeEditorFlipVertically;
+        public Texture2D shapeEditorGridDouble;
+        public Texture2D shapeEditorGridHalf;
         public Texture2D shapeEditorHome;
         public Texture2D shapeEditorIcon;
         public Texture2D shapeEditorMeasuringTape;
