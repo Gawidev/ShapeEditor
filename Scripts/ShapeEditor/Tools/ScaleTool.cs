@@ -188,7 +188,7 @@ namespace AeternumGames.ShapeEditor
         {
             // optionally snap the scale to grid increments.
             if (editor.isSnapping)
-                scale = scale.Snap(editor.gridSnap);
+                scale = scale.Snap(editor.scaleSnap);
 
             // scale the selected segments using their initial position.
             foreach (var segment in editor.ForEachSelectedObject())

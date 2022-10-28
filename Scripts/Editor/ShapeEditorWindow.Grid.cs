@@ -24,6 +24,7 @@ namespace AeternumGames.ShapeEditor
         internal static readonly Color constraintGlobalYColor = new Color(0.486f, 0.886f, 0.392f);
         private float2 gridOffset;
         internal float gridZoom = 1f;
+        internal float scaleSnap = 0.1f;
         internal float gridSnap = 0.125f;
         internal float angleSnap = 15f;
         internal int renderTextureWidth = 1;
@@ -335,7 +336,31 @@ namespace AeternumGames.ShapeEditor
         {
             gridSnap /= 2;
         }
+
+        /// <summary>Will double the size of the current angle snapping value.</summary>
+        public void AngleDoubleSnap()
+        {
+            angleSnap *= 2;
+        }
+
+        /// <summary>Will half the size of the current angle snapping value.</summary>
+        public void AngleHalfSnap()
+        {
+            angleSnap /= 2;
+        }
+
+        /// <summary>Will multiply by 10 the size of the current grid snapping value.</summary>
+        public void ScaleTenTimesUpSnap()
+        {
+            scaleSnap *= 10;
+        }
         
+        /// <summary>Will divide by 10 the size of the current grid snapping value.</summary>
+        public void ScaleTenTimesDownSnap()
+        {
+            scaleSnap /= 10;
+        }
+
         /// <summary>Attempts to find the closest segment at the specified screen position.</summary>
         /// <param name="position">The screen position to search at.</param>
         /// <returns>The segment if found or null.</returns>

@@ -20,6 +20,7 @@ namespace AeternumGames.ShapeEditor
         internal float2 mouseGridInitialPosition;
         internal bool isCtrlPressed;
         internal bool isShiftPressed;
+        internal bool isAltPressed;
         private int desiredMouseCursorTimer;
         private MouseCursor desiredMouseCursor;
         private Texture2D customMouseCursor;
@@ -191,6 +192,7 @@ namespace AeternumGames.ShapeEditor
 
                 isCtrlPressed = e.modifiers.HasFlag(EventModifiers.Control);
                 isShiftPressed = e.modifiers.HasFlag(EventModifiers.Shift);
+                isAltPressed = e.modifiers.HasFlag(EventModifiers.Alt);
 
                 if (OnKeyDown(e.keyCode))
                     e.Use();

@@ -383,11 +383,21 @@ namespace AeternumGames.ShapeEditor
                             return true;
                         
                         case KeyCode.KeypadMultiply:
-                            GridDoubleSnap();
+                            if (isAltPressed)
+                                AngleDoubleSnap();
+                            else if (isShiftPressed)
+                                ScaleTenTimesUpSnap();
+                            else
+                                GridDoubleSnap();
                             return true;
                         
                         case KeyCode.KeypadDivide:
-                            GridHalfSnap();
+                            if (isAltPressed)
+                                AngleHalfSnap();
+                            else if (isShiftPressed)
+                                ScaleTenTimesDownSnap();
+                            else
+                                GridHalfSnap();
                             return true;
                     }
                 }
