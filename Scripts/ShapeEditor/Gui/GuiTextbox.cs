@@ -123,6 +123,21 @@ namespace AeternumGames.ShapeEditor
             }
         }
 
+        public override bool OnMouseScroll(float delta)
+        {
+            if (isMouseOver)
+            {
+                if (delta > 0)
+                    CaretRight(false);
+                else
+                    CaretLeft(false);
+
+                return true;
+            }
+
+            return false;
+        }
+
         public override void OnRender()
         {
             // change the mouse cursor when hovering over this control.
